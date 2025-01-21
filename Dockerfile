@@ -2,9 +2,9 @@ FROM python:3.8.2-buster AS build
 
 COPY . /opt/build
 
-RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+RUN curl -sSL https://install.python-poetry.org | python3 -
 
-RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
 
 RUN cd /opt/build \
     && rm -rf dist \
